@@ -353,38 +353,177 @@ function drawChimney() {
 function drawSmoke() {
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
+    /*Right smoke line*/
+    /*Start x coordinates for first quadratic curve*/
+    var smokexR = Math.floor((Math.random() * (380 - 360)) + 360);
+    /*Start y coordinates for first quadratic curve*/
+    var smokeyR = Math.floor((Math.random() * (90 - 70)) + 70);
+    /*End x coordinates for first quadratic curve*/
+    var smokex2R = 400;
+    /*End y coordinates for first quadratic curve*/
+    var smokey2R = 150;
+    /*control x coordinates for first quadratic curve*/
+    var ctrlxquad1R = Math.floor((Math.random() * (450 - 430)) + 430);
+    /*control y coordinates for first quadratic curve*/
+    var ctrlyquad1R = Math.floor((Math.random() * (140 - 120)) + 120);
+    /*Start x coordinates for second quadratic curve*/
+    var smokexRSecond = Math.floor((Math.random() * (340 - 320)) + 320);
+    /*Start y coordinates for second quadratic curve*/
+    var smokeyRSecond = Math.floor((Math.random() * (70 - 50)) + 50);
+    /*End x coordinates for second quadratic curve*/
+    var smokex2RSecond = smokexR;
+    /*End y coordinates for second quadratic curve*/
+    var smokey2RSecond = smokeyR;
+    /*control x coordinates for second quadratic curve*/
+    var ctrlxquad1RSecond = Math.floor((Math.random() * (400 - 380)) + 380);
+    /*control y coordinates for second quadratic curve*/
+    var ctrlyquad1RSecond = Math.floor((Math.random() * (70 - 50)) + 50);
+    /*Start x coordinates for third quadratic curve*/
+    var smokexRThird = Math.floor((Math.random() * (320 - 300)) + 300);
+    /*Start y coordinates for third quadratic curve*/
+    var smokeyRThird = Math.floor((Math.random() * (50 - 30)) + 30);
+    /*End x coordinates for third quadratic curve*/
+    var smokex2RThird = smokexRSecond;
+    /*End y coordinates for third quadratic curve*/
+    var smokey2RThird = smokeyRSecond;
+    /*control x coordinates for third quadratic curve*/
+    var ctrlxquad1RThird = Math.floor((Math.random() * (350 - 320)) + 320);
+    /*control y coordinates for third quadratic curve*/
+    var ctrlyquad1RThird = Math.floor((Math.random() * (50 - 30)) + 30);
+    /*Start x coordinates for fourth quadratic curve*/
+    var smokexRFourth = Math.floor((Math.random() * (300 - 280)) + 280);
+    /*Start y coordinates for fourth quadratic curve*/
+    var smokeyRFourth = Math.floor(0);
+    /*End x coordinates for fourth quadratic curve*/
+    var smokex2RFourth = smokexRThird;
+    /*End y coordinates for fourth quadratic curve*/
+    var smokey2RFourth = smokeyRThird;
+    /*control x coordinates for fourth quadratic curve*/
+    var ctrlxquad1RFourth = Math.floor((Math.random() * (350 - 320)) + 320);
+    /*control y coordinates for fourth quadratic curve*/
+    var ctrlyquad1RFourth = Math.floor((Math.random() * (30 - 10)) + 10);
     ctx.beginPath();
-    ctx.moveTo(350, 80);
-    ctx.quadraticCurveTo(320, 90, 360, 110);
-    ctx.quadraticCurveTo(380, 140, 390, 110);
-    ctx.quadraticCurveTo(420, 100, 380, 75);
-    ctx.quadraticCurveTo(360, 45, 350, 80);
-    // complete custom shape
+    ctx.moveTo(smokexR, smokeyR);
+    ctx.quadraticCurveTo(ctrlxquad1R, ctrlyquad1R, smokex2R, smokey2R);
+    ctx.moveTo(smokexRSecond, smokeyRSecond);
+    ctx.quadraticCurveTo(ctrlxquad1RSecond, ctrlyquad1RSecond, smokex2RSecond, smokey2RSecond);
+    ctx.moveTo(smokexRThird, smokeyRThird);
+    ctx.quadraticCurveTo(ctrlxquad1RThird, ctrlyquad1RThird, smokex2RThird, smokey2RThird);
+    ctx.moveTo(smokexRFourth, smokeyRFourth);
+    ctx.quadraticCurveTo(ctrlxquad1RFourth, ctrlyquad1RFourth, smokex2RFourth, smokey2RFourth);
     ctx.closePath();
-    ctx.fillStyle = "#7F8C8D";
+    ctx.fillStyle = "#566573";
     ctx.fill();
-    ctx.stroke();
-}
+    /*Left smoke line*/
+    /*Start x coordinates for first quadratic curve*/
+    var smokex = Math.floor((Math.random() * (300 - 290)) + 270);
+    /*Start y coordinates for first quadratic curve*/
+    var smokey = Math.floor((Math.random() * (100 - 90)) + 90);
+    /*End x coordinates for first quadratic curve*/
+    var smokex2 = 326;
+    /*End y coordinates for first quadratic curve*/
+    var smokey2 = 135;
+    /*control x coordinates for first quadratic curve*/
+    var ctrlxquad1 = Math.floor((Math.random() * (270 - 250)) + 250);
+    /*control y coordinates for first quadratic curve*/
+    var ctrlyquad1 = Math.floor((Math.random() * (140 - 120)) + 120);
+    /*Start x coordinates for second quadratic curve*/
+    var smokexSecond = Math.floor((Math.random() * (260 - 240)) + 240);
+    /*Start y coordinates for second quadratic curve*/
+    var smokeySecond = Math.floor((Math.random() * (80 - 60)) + 60);
+    /*End x coordinates for second quadratic curve*/
+    var smokex2Second = smokex;
+    /*End y coordinates for second quadratic curve*/
+    var smokey2Second = smokey;
+    /*control x coordinates for second quadratic curve*/
+    var ctrlxquad1Second = Math.floor((Math.random() * (250 - 240)) + 240);
+    /*control y coordinates for second quadratic curve*/
+    var ctrlyquad1Second = Math.floor((Math.random() * (120 - 100)) + 100);
+    /*Start x coordinates for third quadratic curve*/
+    var smokexThird = Math.floor((Math.random() * (220 - 200)) + 200);
+    /*Start y coordinates for third quadratic curve*/
+    var smokeyThird = Math.floor((Math.random() * (60 - 40)) + 40);
+    /*End x coordinates for third quadratic curve*/
+    var smokex2Third = smokexSecond;
+    /*End y coordinates for third quadratic curve*/
+    var smokey2Third = smokeySecond;
+    /*control x coordinates for third quadratic curve*/
+    var ctrlxquad1Third = Math.floor((Math.random() * (230 - 210)) + 210);
+    /*control y coordinates for third quadratic curve*/
+    var ctrlyquad1Third = Math.floor((Math.random() * (90 - 70)) + 70);
+    /*Start x coordinates for fourth quadratic curve*/
+    var smokexFourth = Math.floor((Math.random() * (170 - 150)) + 150);
+    /*Start y coordinates for fourth quadratic curve*/
+    var smokeyFourth = Math.floor((Math.random() * (50 - 30)) + 30);
+    /*End x coordinates for fourth quadratic curve*/
+    var smokex2Fourth = smokexThird;
+    /*End y coordinates for fourth quadratic curve*/
+    var smokey2Fourth = smokeyThird;
+    /*control x coordinates for fourth quadratic curve*/
+    var ctrlxquad1Fourth = Math.floor((Math.random() * (180 - 160)) + 160);
+    /*control y coordinates for fourth quadratic curve*/
+    var ctrlyquad1Fourth = Math.floor((Math.random() * (70 - 60)) + 60);
+    /*Start x coordinates for fifth quadratic curve*/
+    var smokexFifth = Math.floor((Math.random() * (80 - 60)) + 60);
+    /*Start y coordinates for fifth quadratic curve*/
+    var smokeyFifth = Math.floor(0);
+    /*End x coordinates for fifth quadratic curve*/
+    var smokex2Fifth = smokexFourth;
+    /*End y coordinates for fifth quadratic curve*/
+    var smokey2Fifth = smokeyFourth;
+    /*control x coordinates for fifth quadratic curve*/
+    var ctrlxquad1Fifth = Math.floor((Math.random() * (90 - 70)) + 70);
+    /*control y coordinates for fifth quadratic curve*/
+    var ctrlyquad1Fifth = Math.floor((Math.random() * (50 - 30)) + 30);
+    ctx.beginPath();
+    ctx.moveTo(smokex, smokey);
+    ctx.quadraticCurveTo(ctrlxquad1, ctrlyquad1, smokex2, smokey2);
+    ctx.lineTo(350, 130);
+    ctx.lineTo(400, 150);
+    ctx.lineTo(smokexR, smokeyR);
+    ctx.moveTo(smokexSecond, smokeySecond);
+    ctx.quadraticCurveTo(ctrlxquad1Second, ctrlyquad1Second, smokex2Second, smokey2Second);
+    ctx.lineTo(smokex2RSecond, smokey2RSecond);
+    ctx.lineTo(smokexRSecond, smokeyRSecond);
+    ctx.moveTo(smokexThird, smokeyThird);
+    ctx.quadraticCurveTo(ctrlxquad1Third, ctrlyquad1Third, smokex2Third, smokey2Third);
+    ctx.lineTo(smokex2RThird, smokey2RThird);
+    ctx.lineTo(smokexRThird, smokeyRThird);
+    ctx.moveTo(smokexFourth, smokeyFourth);
+    ctx.quadraticCurveTo(ctrlxquad1Fourth, ctrlyquad1Fourth, smokex2Fourth, smokey2Fourth);
+    ctx.lineTo(smokex2RFourth, smokey2RFourth);
+    ctx.lineTo(smokexRFourth, smokeyRFourth);
+    ctx.moveTo(smokexFifth, smokeyFifth);
+    ctx.quadraticCurveTo(ctrlxquad1Fifth, ctrlyquad1Fifth, smokex2Fifth, smokey2Fifth);
+    ctx.lineTo(smokexRFourth, smokeyRFourth);
+    ctx.closePath();
+    ctx.fillStyle = "#566573";
+    ctx.fill();
+    /*End of first quadratic curve*/
+    }
+   
+    function sliderControl(){
+        document.querySelector('input[type="range"]').addEventListener('change', function (e) {
+            timing = parseInt(this.value, 10);
+        });
+        setTimeout(drawSmoke, timing);
+    }
 
-function sliderControl() {
-    var x = document.createElement("INPUT");
-}
-
-function drawHouse() {
-    ground();
-    background();
-    drawRoof();
-    mainWall();
-    drawFrontOfHouse();
-    drawDoorArea();
-    drawDoorArea();
-    drawHiddenPartOfRoof();
-    drawFrontStairs();
-    drawSideOfStairs();
-    twoWindowsForLeftWall();
-    twoWindowsForFrontOfHouse();
-    baseOfHouse();
-    drawChimney();
-    drawDoor();
-    drawSmoke();
-}
+    function drawHouse() {
+        ground();
+        background();
+        drawRoof();
+        mainWall();
+        drawFrontOfHouse();
+        drawDoorArea();
+        drawDoorArea();
+        drawHiddenPartOfRoof();
+        drawFrontStairs();
+        drawSideOfStairs();
+        twoWindowsForLeftWall();
+        twoWindowsForFrontOfHouse();
+        baseOfHouse();
+        drawChimney();
+        drawDoor();
+        drawSmoke();
+    }
