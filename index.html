@@ -5,20 +5,41 @@
     <title>Lowenstein, Luli Liang, Dingye (Declan)</title>
     <meta charset="utf-8">
     <script src="./js/script.js"></script>
-    <link href="Styles/style.css" rel="stylesheet"> </head>
+    <link href="Styles/style.css" rel="stylesheet">
+    
+</head>
 
 <body onload="sliderControl()">
     <div class="container">
         <header>
-            <h1>Luli and Declan's upside-down House</h1> </header>
+            <h2>Luli and Declan's upside-down House.</h2>
+            <h3>Set D</h3>
+        </header>
         <canvas id="myHouse" height="450px" width="500px"></canvas>
+        <div>fast<input  type="range" min="100" max="4000" step="500" value="1950" id="range" onchange="sliderControl();">slow
+        </div>
         <article>
-            <p>We have completed...</p>
-            <p>We have not completed...</p>
-            <p>Major challenges were...</p>
+            <p>We believe we have completed everything in the requirements. Our smoke is realistic, and it speeds up and slows down depending on the slider value. Our house is creative and 3-dimensional.</p>
+            <p>We wanted to change the color of the smoke as it rose up. But unfortunately were unable to implement it. We decided to get the smoke just right instead of focusing too much on color changes.</p>
+            <p>Major challenges were debugging JavaScript. It was very frustrating to debug JavaScript, and we even had to use the debugging tools in Chrome a couple of times.</p>
         </article>
     </div>
-    <footer> <span id="luli">Luli Lowenstein A00946133</span> <span id="declan">Dingye (Declan) Liang A00000000</span> </footer>
+    <footer> 
+        <table>
+            <tr>
+                <td class="luli">Luli Lowenstein</td>
+                <td class="declan">Dingye (Declan) Liang</td>
+            </tr>
+            <tr>
+                <td class="luli">A00946133</td>
+                <td class="declan">A00980161</td>
+            </tr>
+            <tr>
+                <td class="luli">llowenstein@my.bcit.ca</td>
+                <td class="declan">dliang20@my.bcit.ca</td>
+            </tr>
+        </table>
+    </footer>
 </body>
-
+    
 </html>

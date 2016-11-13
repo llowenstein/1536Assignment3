@@ -1,3 +1,4 @@
+/*Draws green ground rectangle*/
 function ground() {
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
@@ -8,6 +9,7 @@ function ground() {
     ctx.stroke();
 }
 
+/*Draws a blue sky rectangle*/
 function background() {
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
@@ -18,9 +20,11 @@ function background() {
     ctx.stroke();
 }
 
+/*Draws the roof. Since this is an upside down house, the roof is on the bottom of the house*/
 function drawRoof() {
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
+    
     /*Thin part of roof*/
     ctx.fillStyle = '#C0392B';
     ctx.beginPath();
@@ -31,6 +35,7 @@ function drawRoof() {
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
+    
     /*Main part of roof*/
     ctx.fillStyle = '#A93226';
     ctx.beginPath();
@@ -41,6 +46,7 @@ function drawRoof() {
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
+    
     /*Thin right part of roof*/
     ctx.fillStyle = '#C0392B';
     ctx.beginPath();
@@ -53,6 +59,7 @@ function drawRoof() {
     ctx.stroke()
 }
 
+/*Draws the left facing wall*/
 function mainWall() {
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
@@ -67,10 +74,12 @@ function mainWall() {
     ctx.stroke();
 }
 
+/*draws the two windows of the left facing wall*/
 function twoWindowsForLeftWall() {
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
     ctx.fillStyle = "#85C1E9";
+    
     /*first window*/
     ctx.beginPath();
     ctx.moveTo(45, 234);
@@ -80,18 +89,21 @@ function twoWindowsForLeftWall() {
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
+    
     /*vertical lines for first window*/
     ctx.beginPath();
     ctx.moveTo(65, 231);
     ctx.lineTo(65, 275);
     ctx.closePath();
     ctx.stroke();
+    
     /*horizontal lines for first window*/
     ctx.beginPath();
     ctx.moveTo(95, 253);
     ctx.lineTo(45, 255);
     ctx.closePath();
     ctx.stroke();
+    
     /*second window*/
     ctx.fillStyle = "#85C1E9";
     ctx.beginPath();
@@ -102,12 +114,14 @@ function twoWindowsForLeftWall() {
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
+    
     /*vertical lines for first window*/
     ctx.beginPath();
     ctx.moveTo(155, 221);
     ctx.lineTo(155, 279);
     ctx.closePath();
     ctx.stroke();
+    
     /*horizontal lines for first window*/
     ctx.beginPath();
     ctx.moveTo(125, 253);
@@ -116,6 +130,7 @@ function twoWindowsForLeftWall() {
     ctx.stroke();
 }
 
+/*Draws the part of the front of the house witht he door in it*/
 function drawDoorArea() {
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
@@ -129,6 +144,7 @@ function drawDoorArea() {
     ctx.fill();
 }
 
+/*Draws the door, including the door knob*/
 function drawDoor() {
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
@@ -141,6 +157,7 @@ function drawDoor() {
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
+    
     /*Door knob*/
     ctx.beginPath();
     ctx.arc(300, 365, 5, 0, 2 * Math.PI);
@@ -149,6 +166,7 @@ function drawDoor() {
     ctx.stroke();
 }
 
+/*draws the rest of the front of the house*/
 function drawFrontOfHouse() {
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
@@ -162,6 +180,7 @@ function drawFrontOfHouse() {
     ctx.fill();
 }
 
+/*Draws the thin part of roof that is showing on the right*/
 function drawHiddenPartOfRoof() {
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
@@ -176,9 +195,12 @@ function drawHiddenPartOfRoof() {
     ctx.stroke();
 }
 
+/*draws the front part of the stairs*/
 function drawFrontStairs() {
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
+    
+    /*Top stair*/
     ctx.fillStyle = "#138D75";
     ctx.beginPath();
     ctx.moveTo(290, 394);
@@ -188,6 +210,8 @@ function drawFrontStairs() {
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
+    
+    /*Bottom stair*/
     ctx.fillStyle = "#138D75";
     ctx.beginPath();
     ctx.moveTo(310, 410);
@@ -199,9 +223,12 @@ function drawFrontStairs() {
     ctx.stroke();
 }
 
+/*Draws the side view of the stairs*/
 function drawSideOfStairs() {
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
+    
+    /*Top stair*/
     ctx.fillStyle = "#117A65";
     ctx.beginPath();
     ctx.moveTo(258, 394);
@@ -211,6 +238,8 @@ function drawSideOfStairs() {
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
+    
+    /*Bottom stair*/
     ctx.fillStyle = "#117A65";
     ctx.beginPath();
     ctx.moveTo(262, 410);
@@ -222,10 +251,12 @@ function drawSideOfStairs() {
     ctx.stroke();
 }
 
+/*Draws the two windoes on the front of the house*/
 function twoWindowsForFrontOfHouse() {
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
     ctx.fillStyle = "#AED6F1";
+    
     /*first window*/
     ctx.beginPath();
     ctx.moveTo(250, 215);
@@ -235,18 +266,21 @@ function twoWindowsForFrontOfHouse() {
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
+    
     /*vertical lines for first window*/
     ctx.beginPath();
     ctx.moveTo(285, 225);
     ctx.lineTo(285, 289);
     ctx.closePath();
     ctx.stroke();
+    
     /*horizontal lines for first window*/
     ctx.beginPath();
     ctx.moveTo(250, 250);
     ctx.lineTo(314, 265);
     ctx.closePath();
     ctx.stroke();
+    
     /*Second window*/
     ctx.fillStyle = "#AED6F1";
     ctx.beginPath();
@@ -257,12 +291,14 @@ function twoWindowsForFrontOfHouse() {
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
+    
     /*vertical lines for second window*/
     ctx.beginPath();
     ctx.moveTo(360, 248);
     ctx.lineTo(360, 303);
     ctx.closePath();
     ctx.stroke();
+    
     /*horizontal lines for second window*/
     ctx.beginPath();
     ctx.moveTo(335, 270);
@@ -271,9 +307,12 @@ function twoWindowsForFrontOfHouse() {
     ctx.stroke();
 }
 
+/*Draws the thin top part of the house*/
+/*Calls partUnderBaseOfHouse to draw the thin grey part under the base as well*/
 function baseOfHouse() {
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
+    
     /*Left part*/
     ctx.fillStyle = "#A93226";
     ctx.beginPath();
@@ -286,6 +325,7 @@ function baseOfHouse() {
     ctx.stroke();
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
+    
     /*Right part*/
     ctx.fillStyle = "#C0392B";
     ctx.beginPath();
@@ -299,9 +339,11 @@ function baseOfHouse() {
     partUnderBaseOfHouse();
 }
 
+/*Draws the thin grey part uner the base of the house. This is at the top of the house*/
 function partUnderBaseOfHouse() {
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
+    
     /*Left part*/
     ctx.fillStyle = "#515A5A";
     ctx.beginPath();
@@ -314,6 +356,7 @@ function partUnderBaseOfHouse() {
     ctx.stroke();
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
+    
     /*Right part*/
     ctx.fillStyle = "#515A5A";
     ctx.beginPath();
@@ -326,9 +369,12 @@ function partUnderBaseOfHouse() {
     ctx.stroke();
 }
 
+/*Draws the chimney*/
 function drawChimney() {
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
+    
+    /*Right side*/
     ctx.fillStyle = "#1B4F72";
     ctx.beginPath();
     ctx.moveTo(350, 130);
@@ -338,7 +384,8 @@ function drawChimney() {
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
-    /*Left side of Chimney*/
+    
+    /*Left side*/
     ctx.fillStyle = "#154360";
     ctx.beginPath();
     ctx.moveTo(325, 135);
@@ -350,10 +397,13 @@ function drawChimney() {
     ctx.stroke();
 }
 
+/*Draws the smoke*/
 function drawSmoke() {
     var canvas = document.getElementById("myHouse");
     var ctx = canvas.getContext("2d");
+    
     /*Right smoke line*/
+    
     /*Start x coordinates for first quadratic curve*/
     var smokexR = Math.floor((Math.random() * (380 - 360)) + 360);
     /*Start y coordinates for first quadratic curve*/
@@ -402,19 +452,10 @@ function drawSmoke() {
     var ctrlxquad1RFourth = Math.floor((Math.random() * (350 - 320)) + 320);
     /*control y coordinates for fourth quadratic curve*/
     var ctrlyquad1RFourth = Math.floor((Math.random() * (30 - 10)) + 10);
-    ctx.beginPath();
-    ctx.moveTo(smokexR, smokeyR);
-    ctx.quadraticCurveTo(ctrlxquad1R, ctrlyquad1R, smokex2R, smokey2R);
-    ctx.moveTo(smokexRSecond, smokeyRSecond);
-    ctx.quadraticCurveTo(ctrlxquad1RSecond, ctrlyquad1RSecond, smokex2RSecond, smokey2RSecond);
-    ctx.moveTo(smokexRThird, smokeyRThird);
-    ctx.quadraticCurveTo(ctrlxquad1RThird, ctrlyquad1RThird, smokex2RThird, smokey2RThird);
-    ctx.moveTo(smokexRFourth, smokeyRFourth);
-    ctx.quadraticCurveTo(ctrlxquad1RFourth, ctrlyquad1RFourth, smokex2RFourth, smokey2RFourth);
-    ctx.closePath();
-    ctx.fillStyle = "#566573";
-    ctx.fill();
+    
+    
     /*Left smoke line*/
+    
     /*Start x coordinates for first quadratic curve*/
     var smokex = Math.floor((Math.random() * (300 - 290)) + 270);
     /*Start y coordinates for first quadratic curve*/
@@ -481,10 +522,14 @@ function drawSmoke() {
     ctx.lineTo(350, 130);
     ctx.lineTo(400, 150);
     ctx.lineTo(smokexR, smokeyR);
+    ctx.moveTo(smokexR, smokeyR);
+    ctx.quadraticCurveTo(ctrlxquad1R, ctrlyquad1R, smokex2R, smokey2R);
     ctx.moveTo(smokexSecond, smokeySecond);
     ctx.quadraticCurveTo(ctrlxquad1Second, ctrlyquad1Second, smokex2Second, smokey2Second);
     ctx.lineTo(smokex2RSecond, smokey2RSecond);
     ctx.lineTo(smokexRSecond, smokeyRSecond);
+    ctx.moveTo(smokexRSecond, smokeyRSecond);
+    ctx.quadraticCurveTo(ctrlxquad1RSecond, ctrlyquad1RSecond, smokex2RSecond, smokey2RSecond);
     ctx.moveTo(smokexThird, smokeyThird);
     ctx.quadraticCurveTo(ctrlxquad1Third, ctrlyquad1Third, smokex2Third, smokey2Third);
     ctx.lineTo(smokex2RThird, smokey2RThird);
@@ -493,37 +538,43 @@ function drawSmoke() {
     ctx.quadraticCurveTo(ctrlxquad1Fourth, ctrlyquad1Fourth, smokex2Fourth, smokey2Fourth);
     ctx.lineTo(smokex2RFourth, smokey2RFourth);
     ctx.lineTo(smokexRFourth, smokeyRFourth);
+    ctx.moveTo(smokexRThird, smokeyRThird);
+    ctx.quadraticCurveTo(ctrlxquad1RThird, ctrlyquad1RThird, smokex2RThird, smokey2RThird);
     ctx.moveTo(smokexFifth, smokeyFifth);
     ctx.quadraticCurveTo(ctrlxquad1Fifth, ctrlyquad1Fifth, smokex2Fifth, smokey2Fifth);
     ctx.lineTo(smokexRFourth, smokeyRFourth);
+    ctx.moveTo(smokexRFourth, smokeyRFourth);
+    ctx.quadraticCurveTo(ctrlxquad1RFourth, ctrlyquad1RFourth, smokex2RFourth, smokey2RFourth);
     ctx.closePath();
     ctx.fillStyle = "#566573";
     ctx.fill();
-    /*End of first quadratic curve*/
-    }
-   
-    function sliderControl(){
-        document.querySelector('input[type="range"]').addEventListener('change', function (e) {
-            timing = parseInt(this.value, 10);
-        });
-        setTimeout(drawSmoke, timing);
-    }
+}
 
-    function drawHouse() {
-        ground();
-        background();
-        drawRoof();
-        mainWall();
-        drawFrontOfHouse();
-        drawDoorArea();
-        drawDoorArea();
-        drawHiddenPartOfRoof();
-        drawFrontStairs();
-        drawSideOfStairs();
-        twoWindowsForLeftWall();
-        twoWindowsForFrontOfHouse();
-        baseOfHouse();
-        drawChimney();
-        drawDoor();
-        drawSmoke();
-    }
+/*Calls all the functions to draw the whole house*/
+function drawHouse() {
+    ground();
+    background();
+    drawRoof();
+    mainWall();
+    drawFrontOfHouse();
+    drawDoorArea();
+    drawHiddenPartOfRoof();
+    drawFrontStairs();
+    drawSideOfStairs();
+    twoWindowsForLeftWall();
+    twoWindowsForFrontOfHouse();
+    baseOfHouse();
+    drawChimney();
+    drawSmoke();
+    drawDoor();
+}
+
+/*Our function to control the range timing and the speeding up and slowing down of the smoke*/
+    var myTimer;
+    function sliderControl() {
+        drawHouse();
+        var num = document.getElementById("range");
+        var local = document.getElementById("show");
+        clearInterval(myTimer);
+        myTimer = setInterval(function(){ drawHouse() },num.value);
+}
